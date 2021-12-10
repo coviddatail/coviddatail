@@ -1,0 +1,1 @@
+(SELECT day, total FROM `coviddatail.staging.deaths_report_1` order by day desc LIMIT 2)
