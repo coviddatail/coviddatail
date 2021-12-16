@@ -1,0 +1,66 @@
+WITH unpivoted_parsed as (
+select 
+    DATE(Date)  report_date,
+    group_name, 
+    SAFE_CAST(REPLACE(value,'<','') AS NUMERIC) AS numeric_value
+from 
+`coviddatail.staging.vaccinated_communities`    
+UNPIVOT (value for group_name in (first_dose_0_19,
+first_dose_20_29,
+first_dose_30_39,
+first_dose_40_49,
+first_dose_50_59,
+first_dose_60_69,
+first_dose_70_79,
+first_dose_80_89,
+first_dose_90_,
+second_dose_0_19,
+second_dose_20_29,
+second_dose_30_39,
+second_dose_40_49,
+second_dose_50_59,
+second_dose_60_69,
+second_dose_70_79,
+second_dose_80_89,
+second_dose_90_,
+third_dose_0_19,
+third_dose_20_29,
+third_dose_30_39,
+third_dose_40_49,
+third_dose_50_59,
+third_dose_60_69,
+third_dose_70_79,
+third_dose_80_89,
+third_dose_90_))
+),
+parsed as (select * from
+unpivoted_parsed
+pivot (max(numeric_value) for group_name in (
+'first_dose_20_29',
+'first_dose_30_39',
+'first_dose_40_49',
+'first_dose_50_59',
+'first_dose_60_69',
+'first_dose_70_79',
+'first_dose_80_89',
+'first_dose_90_',
+'second_dose_0_19',
+'second_dose_20_29',
+'second_dose_30_39',
+'second_dose_40_49',
+'second_dose_50_59',
+'second_dose_60_69',
+'second_dose_70_79',
+'second_dose_80_89',
+'second_dose_90_',
+'third_dose_0_19',
+'third_dose_20_29',
+'third_dose_30_39',
+'third_dose_40_49',
+'third_dose_50_59',
+'third_dose_60_69',
+'third_dose_70_79',
+'third_dose_80_89',
+'third_dose_90_'))
+)
+select * from parsed

@@ -24,7 +24,7 @@ def upload_frames(event, context):
             print(name)
             resource_done = upload_one_batch(bucket, 
                 resource_id, name, 
-                batch_size=10000, 
+                batch_size=100000, 
                 cap=None, 
                 upload=True)
             done = done and not resource_done

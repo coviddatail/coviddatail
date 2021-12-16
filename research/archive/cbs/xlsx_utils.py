@@ -53,19 +53,14 @@ def worksheet_to_frame(sheet, columns):
     row_list = list(sheet.iter_rows(min_row=1, max_col=max_col, max_row=max_row, values_only=True))
     return pd.DataFrame(row_list, columns=columns)
 
-def worksheets_to_unified_frame(book, columns, min_year=None, debug=False):
+def worksheets_to_unified_frame(book, columns, prefix='', debug=False):
     if columns is None:
         columns 
     fr = None
     # loop instead of one whole fr for memory reasons
     for sheet in book.worksheets:
         print(sheet.title)
-        try:
-            year = int(sheet.title)
-        except:
-            continue
-        if year>=min_year:
-
+        if sheet.title.startswith(prefix):
             n = worksheet_to_frame(sheet, columns)
             print(n.shape)
             if fr is None:
@@ -73,44 +68,25 @@ def worksheets_to_unified_frame(book, columns, min_year=None, debug=False):
             else:
                 fr = pd.concat([fr, n])
     return fr
-
-def read(url):  
-
-    print('Reading from network')
-    resp = requests.get(url)
-    resp.raise_for_status()
-    content = resp.content
-    return content
-
-def normalize(s):
-    import re
-    return re.sub(r'[^a-zA-Z0-9]', '_', s)
-def cached_read(url):  
-    return read(url)
-    from datetime import datetime
-    key = f"cache/{datetime.strftime(datetime.now(),'%Y%m%d')}_{normalize(url)}"
+            
+def cached_read(url):         
+    key = re.sub(r'[/:]', '_', url)
     print(key)
     try:
-        with open(key, 'rb') as f:
-            data = f.read()
-        print('A', type(data))
-        return data
-    except:
-        data = read(url)
-        with open(key, 'wb') as f:
-            f.write(data)
-        print('B', type(data))
-        return data
-
-
+        with open(f'cache/{key}', 'rb') as f:
+            return f.read()
+    except FileNotFoundError:
+        pass
     print('Reading from network')
     resp = requests.get(url)
     resp.raise_for_status()
     content = resp.content
+    with open(f'cache/{key}', 'wb') as f:
+        f.write(content)
     return content
 
 def load_workbook_from_url(url):
-    content = read(url)
+    content = cached_read(url)
     bio = io.BytesIO()
     bio.write(content)
     bio.seek(0)

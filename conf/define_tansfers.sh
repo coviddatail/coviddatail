@@ -144,6 +144,6 @@ bq mk     --transfer_config \
     --data_source=google_cloud_storage \
     --display_name=cbs_deaths_3 \
     --target_dataset=staging \
-    --params='{"field_delimiter": ",", "skip_leading_rows": "1", "write_disposition": "APPEND", "file_format": "CSV", "data_path_template": "gs://coviddatail/cbs/deaths_report_1/*/*.csv", "destination_table_name_template": "deaths_report_3", "max_bad_records": "0"}'
+    --params='{"field_delimiter": ",", "skip_leading_rows": "1", "write_disposition": "APPEND", "file_format": "CSV", "data_path_template": "gs://coviddatail/cbs/deaths_report_3/*/*.csv", "destination_table_name_template": "deaths_report_3", "max_bad_records": "0"}'
 
 

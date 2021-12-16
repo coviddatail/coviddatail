@@ -87,4 +87,4 @@ def upload_batch(event, context):
 
 
 if __name__ == '__main__':
-    upload_batch()
+    upload_batch(None, None)
