@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "coviddatail",
+  "private_key_id": "a1bf1faa3b7b0589dd586f581506d09b8a2420a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCp8Cgqcf3wxJlM\nQPbkxKnxKkFIkXl8wseF3d59QTGwnUm1QVNkm3/AmoOzmnlesbC5ZwRTSkS6eNBS\nJ6A1I0FMqcqFuDMfYT6+GzlxAv1xgyuLQ50//PUaQXFGmqxWbV3IXjilaiBS6Nbn\n0waanMPNXGeGl6g7iOWGbghx8wpUB3q03V96TDqwVGwaFqZ5VufUkh8R9wCKYJez\nOwWlauLowMNCJgDbfb6aYBSxOSA/I3SANgtkfP0TFDE5b8PUEMip5xxE135aSqVH\nxwlfsypeQJvgzOLJXkc21OPB0FnX2p7PS7pWJyKN8iy4KlorOA+o6FP1qlpewiUP\nABJPw/drAgMBAAECggEAUdjZt4u8h1RhExFs+ETiJsW3uKhcL2MursJr8L7QHGS9\nBeAHNrsQHictTHkXgKyrVbiQpD7ueDNM/myYZE9tGWvjn2DWuoPfMLezBEOw5pWL\nCOGRYKrIMBOZ56wCWgQFucXrmXvSQqxjKTeBhEEBqyyYrgHoJHhsN8FSLvOkI1DH\nSCrr+DCmM4vZa9faZwc7B4NXJSNg0ANGFZ9AUR/w2Co9lTHyehTq9G2tVhX+wnkx\n3J44/sgEgtD0sHOnxumehvUxur5EpcpU+xp7yGLXSjrQ3dJmVQCPQYoYPz1f7gx1\nmi2E1iBmm1jLXKZ3uHMlgqy9ITUaBFUm8razrF0yjQKBgQDibyGydkgioQqXff/G\nCpI0Dhmd4D7DuQAHz9+u9oiH5lFMELgYjFXacUNg5MyR0v3eAmN7fbDFUtRynWBR\nAxRIqqrpf749VjN7siQqugxyBYLDhHJwuBcw0CW/6pWH8jH126GY0S3KC1br5jyk\nWa7RIm6T+/U7akdklEGxoR0W/wKBgQDAIJHYcA+8wGLdCv8dh3SNDODCGxVbdbNq\nuSCcotq7ZHLZhAVnYuvyePxw8EHOy3XZd/AQDK5irCTGAcxVUYAJ45bRbwkP/xMK\nSHVJSIsJt60/GhXWsZitAYZNS1IaejzfMFhuUciPV6muDAdT8XGDey4LkIe+3zRh\nQbGtf8drlQKBgBC8fhUewP4uQQYpffo5Vc0bLbGJnZoB1oq9Rp88AaNp1qB0q+bE\nmKPosz46KxSsL691Jb0+8Q3krWc7Up8qRxmH49IWaw1FjdCavimaTskutxeUdpD2\nSmCFQgUJZbwCnsa5URxmeafxZp9RCTJsnos+rEWr3dhiZpx8iM6ERg4pAoGAe0Xq\njlcIofFG/dEKc6Xv8His1Z6PC4nvvrBd7mLHuajv0ATXesiL354lS0m8z7TYPtqn\n24Rnd8RALBQHSU7rumye3m5CAFOHofdv2b+EBo4lyPExxflZntf1li6X1YlM+V+J\nve8XonF628O4B/JJBTXKC32Gu793WlfOayYrjCkCgYEArVjgWX2CBz9tS8abHyFd\nX/3/kEQtZhwh1LMQXu/CNxIYzB2d3+nzHkNPfQu48UC4oAhzJFqPwGitJrc3vvLm\niQ7lbPODbb2jwy4Tj75hUsHFKY9R/7bVTMKuxmUb7bj25gx94Q1dRErUNVm2yqam\njGywZQCnZsW4DouYpzvfuJM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bqresearch@coviddatail.iam.gserviceaccount.com",
+  "client_id": "103772085805534105458",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bqresearch%40coviddatail.iam.gserviceaccount.com"
+}
